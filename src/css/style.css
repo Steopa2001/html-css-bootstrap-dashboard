@@ -3,3 +3,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+input::placeholder {
+  color: gray !important; 
+}
+
+
+@media all and (min-width: 768px) {
+
+table th:nth-child(1) {
+  width: 40%;
+}
+
+}
+
+body {
+  font-size: 12px;
+}
