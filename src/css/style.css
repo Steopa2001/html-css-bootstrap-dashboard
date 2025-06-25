@@ -9,13 +9,7 @@ input::placeholder {
 }
 
 
-@media all and (min-width: 768px) {
 
-table th:nth-child(1) {
-  width: 40%;
-}
-
-}
 
 body {
   font-size: 12px;
