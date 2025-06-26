@@ -162,8 +162,10 @@
               <div class="col">
                 <label class="form-label">ISBN#</label>
                 <input
+                  pattern="\d{13}"
                   name="isbn"
                   required
+                  title="Inserisci un codice ISBN a 13 cifre"
                   type="text"
                   class="form-control"
                   placeholder="Inserisci il codice ISBN#"
