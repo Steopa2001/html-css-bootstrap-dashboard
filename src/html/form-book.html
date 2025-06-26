@@ -50,11 +50,16 @@
                 <a class="nav-link" href="#">Help</a>
               </li>
             </ul>
-           
+
             <form class="d-flex d-md-none" role="search">
-              <input name="[]" class="form-control me-2 style="background-color:
-              #e3f2fd;" data-bs-theme="light" t" type="search"
-              placeholder="Cerca..." aria-label="Search" />
+              <input
+                name="search"
+                class="form-control me-2"
+                style="background-color: #e3f2fd"
+                type="search"
+                placeholder="Cerca..."
+                aria-label="Search"
+              />
               <button class="btn btn-outline-light" type="submit">Cerca</button>
             </form>
           </div>
@@ -71,14 +76,14 @@
             </div>
           </div>
         </div>
-        <div class="row mb-3">
-          <div class="col-6">
-    
-            <form action="">
+
+        <form action="" method="post">
+          <div class="row mb-3">
+            <div class="col-6">
               <div class="col">
                 <label class="form-label">Nome Autore</label>
                 <input
-                  name="nome autore"
+                  name="nome-autore"
                   required
                   type="text"
                   class="form-control"
@@ -86,15 +91,13 @@
                   aria-label="First name"
                 />
               </div>
-          
-          </div>
+            </div>
 
-          <div class="col-6">
-           
+            <div class="col-6">
               <label class="form-label">Cognome Autore</label>
               <div class="col">
                 <input
-                  name="cognome autore"
+                  name="cognome-autore"
                   required
                   type="text"
                   class="form-control"
@@ -102,12 +105,10 @@
                   aria-label="First name"
                 />
               </div>
-         
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col">
-           
+          <div class="row">
+            <div class="col">
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label"
                   >Titolo</label
@@ -116,7 +117,7 @@
                   name="titolo"
                   required
                   placeholder="Inserisci il titolo del libro"
-                  type="email"
+                  type="text"
                   class="form-control"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
@@ -125,44 +126,39 @@
                   Titolo versione italiana
                 </div>
               </div>
-          
+            </div>
           </div>
-        </div>
 
-        <div class="row">
-          <div class="col-12 col-lg-4">
-            
+          <div class="row">
+            <div class="col-12 col-lg-4">
               <div class="mb-3">
                 <label for="disabledSelect" class="form-label">Genere</label>
-                <select id="disabledSelect" class="form-select">
+                <select id="disabledSelect" class="form-select" name="genere">
                   <option>Scegli il genere</option>
                   <option>Romanzo</option>
-              <option>Saggio</option>
-              <option>Biografia</option>
+                  <option>Saggio</option>
+                  <option>Biografia</option>
                 </select>
               </div>
-      
-          </div>
-         
-          <div class="col-12 col-lg-4">
-           
+            </div>
+
+            <div class="col-12 col-lg-4">
               <div class="col">
                 <label class="form-label">Anno di produzione</label>
                 <input
-                  name="anno produzione"
+                  min="2000"
+                  max="2100"
+                  name="anno-produzione"
                   required
-                  type="text"
+                  type="number"
                   class="form-control"
                   placeholder="Inserisci l'anno"
                   aria-label="First name"
                 />
               </div>
-           
-          </div>
-       
-        
-          <div class="col-12 col-lg-4 mb-4">
-          
+            </div>
+
+            <div class="col-12 col-lg-4 mb-4">
               <div class="col">
                 <label class="form-label">ISBN#</label>
                 <input
@@ -174,58 +170,49 @@
                   aria-label="First name"
                 />
               </div>
-       
+            </div>
           </div>
-      
-        </div>
-       
 
-        <hr />
-        <div class="row">
-          <div class="col">
-           
+          <hr />
+          <div class="row">
+            <div class="col">
               <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label"
                   >Note</label
                 >
                 <textarea
+                  name="note"
                   placeholder="Inserisci eventuali note sul libro"
                   class="form-control"
                   id="exampleFormControlTextarea1"
                   rows="3"
                 ></textarea>
               </div>
-          
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            
+          <div class="row">
+            <div class="col">
               <div class="form-check">
                 <input
                   name="digitale"
-                  required
                   class="form-check-input"
                   type="checkbox"
-                  value=""
+                  value="true"
                   id="checkDefault"
                 />
                 <label class="form-check-label" for="checkDefault">
                   Disponibile anche in digitale
                 </label>
               </div>
-          
+            </div>
           </div>
-        </div>
-        <div class="row mt-3 pb-3">
-          <div class="col">
-           
+          <div class="row mt-3 pb-3">
+            <div class="col">
               <button class="btn btn-primary" type="submit">
                 Aggiungi Libro
               </button>
-           
+            </div>
           </div>
-        </div>
         </form>
       </div>
     </main>
